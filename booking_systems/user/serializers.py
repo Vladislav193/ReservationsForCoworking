@@ -3,7 +3,10 @@ from .models import CustomUser
 
 
 class SignUpSerializer(serializers.Serializer):
-    username =
+    username = serializers.CharField()
+    class Meta:
+        model = CustomUser
+        fields = ("username",)
 
 
 class UserSeralizers(serializers.Serializer):
